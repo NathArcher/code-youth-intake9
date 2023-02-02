@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="test.html" method="get">
+        <fieldset>
+    <h1>My feedback form</h1>
+    
+        <ul><li><label for="name">Name<sup>*</sup></label>  
+     <input type="text" name="name" placeholder="First name and Last name" id="name" maxlength="20" size="20" required/></li>
+
+       <li><label for="email">Email <sup>*</sup></label>
+      <input type="email" name="email" id="email" required/></li> 
+
+      <li><label for="password">Password <sup>*</sup> </label>
+      <input type="password" name="password" id="password" required/></li>
+    
+      <li><label for="dob"> Date Of Birth<sup>*</sup></label>
+    <input type="date" name="dob" id="dob" required> </li></ul>
+
+    <ul><li><label for="emotions">Please check all the emotions that apply to you:</label></li>
+        <ul type="disc"><li><input type="checkbox" name="emotions" id="emotions" value="angry"> Angry </input></li>
+            <li><input type="checkbox" name="emotions" id="emotions" value="sad"> Sad </input></li>
+            <li><input type="checkbox" name="emotions" id="emotions" value="happy"> Happy </input></li>
+            <li><input type="checkbox" name="emotions" id="emotions" value="happy"> Happy </input></li>
+            <li><input type="checkbox" name="emotions" id="emotions" value="ambivalent"> Ambivalent </input></li></ul></ul>
+
+            <ul><li><label for="role">How satisfied were you with our service? </label></li>
+<ul type="disc"><li><input type="radio" name="satisfaction" id="satisfaction" value="vsatisfied"> Very satisfied </input></li>
+    <li><input type="radio" name="satisfaction" id="satisfaction" value="satisfied"> Satisfied </input></li>
+    <li><input type="radio" name="satisfaction" id="satisfaction" value="didntcare"> Didn't care </input></li>
+    <li><input type="radio" name="satisfaction" id="satisfaction" value="dissatisfied"> Dissatisfied </input></li>
+    <li><input type="radio" name="satisfaction" id="satisfaction" value="vdissatisfied"> Very dissatisfied </input></li></ul></ul>
+
+<ul><li><label for="comments">Further Comments:</label><textarea rows="3" cols="25" placeholder="Let us know how we can improve...."></textarea></li></ul>
+
+
+<ul><li><label for="image">Bio photo:</label><input type="file" name="image" id="file" accept=".jpeg,.png,/*"> </li></ul>
+
+
+<ul><li><label for="location">Location visited:</label>
+<select id="location" name="store">
+    <option>Centrum</option>
+    <option>Kanata</option>
+    <option>Nepean</option>
+    <option>Quebec</option>
+    <option>Vanier</option>
+</select></li></ul>
+
+<input type="submit" value="Register">
+<input type="reset" value="Reset">
+
+</body>
+</html>
