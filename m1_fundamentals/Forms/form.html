@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="test.html" method="get">
+    <fieldset>
+<legend>Registration Form</legend>
+        <label for="fn">First Name<sup>*</sup></label>
+ <input type="text" name="fname" id="fn" maxlength="20" size="20" required/> <br> <br>
+
+<label for="lname">Last Name </label>
+  <input type="text" name="lname" id="lname"/> <br><br>
+
+  <label for="password">Password <sup>*</sup> </label>
+  <input type="password" name="password" id="password"/> <br><br>
+
+<label for="email">Email <sup>*</sup></label>
+  <input type="email" name="email" id="email"> <br><br>
+
+<label for="dob"> Date Of Birth<sup>*</sup></label>
+<input type="date" name="dob" id="dob"> <br><br>
+
+<label for="country">Have you travelled to any of these places:</label>
+<select id="country" name="country" size="2" multiple>
+    <option>Canada</option>
+    <option>US</option>
+    <option>UK</option>
+    <option>India</option>
+    <option>Iraq</option>
+</select><br><br>
+
+<label for="role"> Please specify your role:</label>
+<input type="radio" name="role" id="role" value="admin"> Admin </input>
+<input type="radio" name="role" id="role" value="er"> Engineer </input>
+<input type="radio" name="role" id="role" value="mgr"> Manager </input>
+<input type="radio" name="role" id="role" value="guest"> Guest </input> <br><br>
+
+<label for="hobby">Hobbies</label>
+<input type="checkbox" name="hobby" id="hobby" value="drawing"> Drawing </input>
+<input type="checkbox" name="hobby" id="hobby" value="singing"> Singing </input>
+<input type="checkbox" name="hobby" id="hobby" value="dancing"> Dancing </input>
+<input type="checkbox" name="hobby" id="hobby" value="others"> Others </input><br><br>
+
+
+
+<label for="comments"> Comments</label>
+<textarea rows="5" cols="10" placeholder="comments here..."></textarea> <br><br>
+
+<label for="search">Search</label>
+<input list="browser"
+<datalist id="browser">
+    <option value="IE"></option>
+    <option value="chrome"></option>
+    <option value="safari"></option>
+</datalist>
+<br><br>
+
+<label for="image">Upload a Image:</label>
+<input type="image" name="image" id="file" accept=".jpeg,.png,.pdf/*"> <br><br>
+
+  <input type="submit" value="Register">
+  <input type="reset" value="Reset">
+  <input type="button" onlclick="alert ['Thanks']"> Click me! </input>
+
+
+   </fieldset> </form>
+</body>
+</html>
