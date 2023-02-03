@@ -6,14 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        <!--
-            .tab {
- margin-left: 10em
+      .button {
+  border: none;
+  color: rgb(2, 45, 238);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
-.tab {
- margin-right: 10em
+       .buttonbook {
+  background-color: rgb(88, 89, 90); 
+  color: rgb(255, 255, 255); 
+  border: 2px solid rgb(88, 89, 90); 
 }
-        </style>
+
+
+</style>
 </head>
 <body>
 <thead>
@@ -32,10 +44,10 @@
 <div>
 
 
- <center> <h1 style="color: rgb(116, 116, 121);margin-left: 4em;padding: 0 7em 2em 0;margin-right: 4em;padding: 0 7em 2em 0;border-width: 50px;">
+ <center> <h1 style="color: rgb(116, 116, 121) text-align: justified;">
   Configure Location on Google map with your API when building a form with 123FormBuilder</h1>
 </center> 
-<p style="margin-left: 2.5em;padding: 0 7em 2em 0;margin-right: 2.5em;padding: 0 7em 2em 0;border-width: 50px;"><span style="font-size: medium; font-family: Arial, Helvetica, sans-serif; text-align: justified; text align:left ;">Showing is always easier than telling. If you need to communicate a 
+<p><span style="font-size: medium; font-family: Arial, Helvetica, sans-serif; text-align: justified; text align:left ;">Showing is always easier than telling. If you need to communicate a 
 specific address to your respondents, do it with the interactive <b><i>Location 
 on Google map</i></b> field. People will appreciate that you’re making their
 experience smoother this way.
@@ -44,24 +56,57 @@ The <b><i>Location on Google map</b></i> field requires a 2 min setup before you
 can get it to work in our form builder.</span></p>
  
 <form>
-    <fieldset>
-        <label for="ddate">Departure Date<sup><span style="color: brown;">*</span></sup></label>
+    <center><table  border="0" cellpadding="15" cellspacing="0"> 
+       <tr>
+        <td><label for="ddate">Departure Date<sup><span style="color: rgb(230, 0, 0);"><b>*</b></span></sup></label><br>
+        <input type="date" name="dd" id="dd"></td>
+        
+        <td><label for="dtime">Departure time<sup><span style="color: rgb(230, 0, 0);"><b>*</b></span></sup></label><br>
+        <input type="time" name="dtime" id="dtime"></td></tr>  </span>
+        
+        <tr><td><label for="rdate"> Return Date<sup><span style="color: rgb(230, 0, 0);"><b>*</b></span></sup></label><br>
+        <input type="date" name="rdate" id="rdate"></td>
+        
+        
+        <td><label for="rtime">Return time<sup><span style="color: rgb(230, 0, 0);"><b>*</b></span></sup></label><br>
+        <input type="time" name="rtime" id="rtime"> </input></td> </tr>
 
-        <input type="date" name="dd" id="dd">   Departure time* <!--add in time box--> <br>
-        
-        <label for="rdate"> Return Date<sup><span style="color: brown;">*</span></sup></label>
-        <input type="date" name="dob" id="dob"> <br><br>
-        
-        <!--Add in date box--> Return time*<!--add in time box?-->
-Number of guests/passengers*<!--add in drop down menu--> Type of room/ticket* <!--add in radio-->
+      
+       
+        <tr><td><label for="nooguests"> Number of guests/passengers<sup><span style="color: rgb(230, 0, 0);"><b>*</b></span></sup></label><br>
+        <select id="nooguests" name="nooguests" size="1">
+          <option>*Please Select*</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3-4</option>
+          <option>5-6</option>
+      </select></td>
+ 
+      
+<td><Table cellspacing="25">
+  <label for="role">Type of room/ticket<sup><span style="color: rgb(230, 0, 0);">*</span></sup>: </label><br>
+<tr>
+  <td><input type="radio" name="role" id="role" value="Eco"> Economy </input></td>
+<td><input type="radio" name="role" id="role" value="Pre"> Premium </input></td></tr>
+
+<tr>
+  <td><input type="radio" name="role" id="role" value="BN"> Business</input></td>
+<td><input type="radio" name="role" id="role" value="Dx"> Deluxe </input></td>
+</tr>
+</table></td></tr> </table></center>
+
+<br><br>
 
 <!--add in google map-->
-
+<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26474.529985773235!2d151.13671189021542!3d-33.958710166470475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b74c8bd59bf5%3A0xa0b39ecb5c991dd!2sNovotel%20Sydney%20Brighton%20Beach!5e0!3m2!1sen!2sca!4v1675450606894!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</center><br>
 <!--add in form submit button titled book-->
 
+<center><button class="buttonbook" type="submit" style="width: 120px; height:45px"><B>BOOK</B></button></center>
 </p>
 
 
-  </div> </tbody></fieldset>
+
+  </div> </tbody>
 </body>
 </html>
