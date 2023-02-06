@@ -1,0 +1,21 @@
+body{
+color: lightblue;
+}
+
+h1{
+   text-align: center; 
+   color: darkblue;
+}
+
+p{
+text-align: center;
+color: red;
+font-family: Arial, Helvetica, sans-serif;
+background-color: pink;
+
+}
+#quot1{
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(193, 207, 65);
+}
