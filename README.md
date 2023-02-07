@@ -65,3 +65,7 @@ in order to make it appear in the correct sections you must use css
 
 <pre>'text'</pre> to make the preformat in
 
+create header with links in different colors
+create div with border, padding, left, top, margin
+create a link button
+choose a layout from the template website and recreate it 

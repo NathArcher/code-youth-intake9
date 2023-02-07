@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /*order matters, must be link,visited, hover and then active*/
+div{
+    background-color: grey;
+    height: 100px;
+    text-align: center;
+}
+    a{
+    padding: 10px;
+    text-decoration: none;
+    display:inline-block;
+    width:50px;
+    height: 50px;
+    background-color: khaki;
+}
+a:link{
+    color:red
+}
+a:visited{
+    color: green;
+}
+a.hover{
+    color: fuchsia;
+}
+a:active{
+    color:goldenrod
+}
+li{
+    display: inline;
+}
+</style>
+
+</head>
+<body>
+    <div>
+    <a href="www.google.com"></a>
+    <a href="www.yahoo.com"></a>
+    <a href="www.amazon.com"></a>
+</div>
+<div>
+    <ul>
+        <li> one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+</div>
+</body>
+</html>
