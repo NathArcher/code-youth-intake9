@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+    .relative{
+        position:relative;
+        top: 50px;
+        left: -50px
+    }
+    .absolute{
+    position: absolute;
+    top: 50px;
+    right: 0;}
+    
+    .fixed{
+        position:fixed;
+        top:50px;
+        left:
+    }
+    .sticky{
+        position:sticky;
+        left:500px;
+        top:500px;
+    }
+
+    .box {
+        position: absolute;
+        /*use x,y or z index to determine where to place*/
+
+
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="static">static</div><!--default-->
+    <div class="relative">relative</div> <!---->
+    <div class="absolute"> absolute</div> <!--same as fixed but does not scroll with screen-->
+    <div class="fixed">fixed</div> <!--stays with the scroll when you are on a scrollable page-->
+    <div class="sticky">sticky</div><!--scrolls with the page but only starts scrolling when you reach the bottom of the page-->
+</body>
+</html>
