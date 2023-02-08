@@ -69,3 +69,13 @@ create header with links in different colors
 create div with border, padding, left, top, margin
 create a link button
 choose a layout from the template website and recreate it 
+
+
+postioning,class names
+
+tr:nth child(put either a number, even or odd here) with this you can change specified rows in tables
+
+tr:hover 
+
+create sticky page
+and do both tables
