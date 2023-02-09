@@ -88,7 +88,17 @@ div{
         float: left !important;
         
         }
-        .t2 table,th, td {
+    #t2 table, #t2 th, #t2 td {
         border:1px solid white;
         border-spacing:2px;
         }
+
+    .t1 tr:nth-child(even){
+     background-color: #38444d;     
+     }
+    .t1 tr:nth-child(odd){
+        background-color: #282A35;
+            }
+    .t1 tr:nth-child(1){
+        background-color: rgb(32, 148, 80);
+            }
