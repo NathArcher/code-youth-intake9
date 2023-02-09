@@ -1,0 +1,152 @@
+body{background-color: #282A35;
+    line-height: 1.5;
+color:white}
+html{text-size-adjust: 100%;}
+
+#button{
+color: #282A35;
+font-size: x-large;
+text-transform: uppercase;
+font-weight: normal;
+}
+
+div{
+    position: absolute;
+    top:150px;
+    right:20px
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color:#2a2c39;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #555;
+    color: white;
+  }
+.t1{
+color:white;
+text-align: left;
+padding:11px 8px;
+font-size: 16px;
+font-family:Arial, Helvetica, sans-serif;
+border-style:hidden;
+border-collapse:collapse;
+width:100%;
+margin: 20px 0;
+margin-top: 20px;
+margin-right: 0px;
+margin-bottom: 20px;
+margin-left: 0px;
+}
+.t1 tr:nth-child(even){
+background-color: #38444d;
+
+
+
+}
+.t1 tr:nth-child(odd){
+background-color: #282A35;
+}
+.t1 tr:nth-child(1){
+background-color: rgb(32, 148, 80);
+}
+.button1{
+color: #fff;
+background-color:rgb(32, 148, 80) ;
+font: size 18px;
+font-family: 'Source Sans Pro', sans-serif;
+padding-left: 19px;
+padding-right:19px;
+border:1px solid #ccc;
+border-radius: 5px;
+float: left !important
+}
+.button2{
+color: #fff;
+background-color:rgb(32, 148, 80) ;
+font: size 18px;
+font-family: 'Source Sans Pro', sans-serif;
+padding-left: 19px;
+padding-right:19px;
+border:1px solid #ccc;
+border-radius: 5px;
+float: right !important;
+
+}
+.button3{
+color: #fff;
+background-color:rgb(32, 148, 80) ;
+font: size 18px;
+font-family: 'Source Sans Pro', sans-serif;
+padding-left: 19px;
+padding-right:19px;
+border:1px solid #ccc;
+border-radius: 5px;
+float: left !important;
+
+}
+.t2 table,th, td {
+border:1px solid white;
+border-spacing:2px;
+}
+/*.topnav{
+background-color: #282A35;
+width: 100px;
+height: 50px;
+position:sticky;
+display:inline-block;
+float:inline-start;
+}*/
+
+.links{
+color: whitesmoke;
+text-decoration:none;
+text-align: center;
+list-style: none;
+display: inline;
+position: relative;
+top: 15px;
+padding: 20px;
+
+}
+
+.sidebar{
+    display:list-item
+}
+
+.sidebar a{display:block;}
+
+a:link{
+color:white;
+text-decoration:none;
+font-size:large;
+padding: 25px;
+}
+a:visited{
+color:white;
+text-decoration:none;
+}
+a:hover{
+color: white;
+text-decoration: none;
+text-decoration-color: white;
+background-color: #0e0f13;
+}
+a:active{
+color:white;
+background-color: rgb(32, 148, 80)
+text-decoration:none;
+}
