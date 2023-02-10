@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height:100%;
+            width:100%;
+            margin:0px;
+            padding:0px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        header,footer{ 
+            flex-basis: 100px;
+            
+        }
+        header{
+            display:absolute;
+            padding: 20px;
+        }
+        .hnav{
+            display:flex;
+            flex-basis: 10px;
+            justify-content:space-between;
+        }
+
+        .hnav li a{ 
+          
+            list-style-type: none;
+            color:black;
+            }
+        #righttnav a{ 
+            margin:5px;
+            color:black;
+            text-decoration: none;
+        }
+        #lefttnav a{ 
+            margin:5px;
+            color: grey;
+            text-decoration: none;
+        }
+        #googledots{
+           
+        }
+        .button {
+            color: #fff;
+            background-color:rgb(60, 79, 255) ;
+            padding: 10px 28px;
+            border-radius: 5px;}
+        
+        
+        
+        main{ 
+            display:flex;
+            flex-basis: 867px;
+            flex-direction: column;
+        }
+
+        #logo{display:flex;
+            justify-content: center;
+            padding-top: 150px;
+            padding-bottom: 20px;
+            
+            }
+        #logo>img{
+            height:140px; 
+            width: 322px;
+        }
+
+        #searchbar{
+            display:flex;
+            justify-content:center;
+            padding-bottom: 50px;
+        }
+        #searchbar input[type=search]{
+            display:block;
+            text-align:left;
+            width:600px;
+            padding:10px;
+            border-radius: 30px;
+            border:1px solid rgb(219, 219, 219);
+        }
+
+        #buttons {
+            display:flex;
+            justify-content: center;
+        }
+        
+        #buttons a{
+            margin: 5px;
+            text-decoration: none;
+        }
+        .button2{
+            display:block;
+            padding: 10px 28px;
+            border-radius: 5px;
+            color:black;
+            background-color: rgb(247, 246, 246);
+        }
+        .button3{
+            display:block;
+            padding: 10px 28px;
+            border-radius: 5px;
+            color:black;
+            background-color: rgb(247, 246, 246);
+        }
+        
+        
+        footer{
+            flex-basis: 20px;
+        }
+        .fnav1{
+            display:flex;
+            align-items: flex-end;
+            margin: 0px;
+            padding:10px;
+            background-color: rgb(240, 240, 240);
+            }
+        .fnav1 li a{
+            list-style-type: none;
+        }
+        .fnav1 a {
+            color:black;
+            text-decoration: none;
+        }
+
+        .fnav2{
+            display:flex;
+            justify-content:space-between;
+            margin: 0px;
+            padding:10px;
+            background-color: rgb(240, 240, 240);
+            border: 1px solid grey
+            }
+        .fnav2 li a{list-style-type: none;}
+
+        #leftfnav a{
+            margin:5px;
+            color:black;
+            text-decoration: none;
+        }
+        #rightfnav a{
+            margin:5px;
+            color:grey;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="hnav" style="font-size: 14px;">
+       
+        <div id="righttnav" >
+            <a href="">About</a>
+            <a href="">Store</a>
+        </div>
+    <div id="lefttnav">
+            <a href="">Gmail</a>
+            <a href="">Images</a>
+            <!--<a href="" id="googledots"><img src="/m1_fundamentals/Images/google dots.PNG"></a>-->
+            <a href="" class="button" style="color:white">Sign in</a>
+        </div>
+
+    </header>
+
+    <main>
+        <div id="logo">
+            <img src="/m1_fundamentals/Images/google logo.PNG" >
+        </div>
+        <div id="searchbar">
+            <input type="search"></input>
+        </div>
+        <div id="buttons" style="font-size: 14px;">
+            <a href="" class="button button2">Google Search</a>
+            <a href="" class="button button3">I'm feeling lucky</a>
+        </div>
+    </main>
+
+    <footer>
+        
+        <div class="fnav1">
+                <a href="">Canada</a>
+        </div>
+        <div class="fnav2">
+            <div id="leftfnav">
+            <a href="">Advertising</a>
+            <a href="">Bussiness</a>
+            <a href="">How Search works</a>
+            </div>
+            <div id="rightfnav">
+            <a href="">Privacy</a>
+            <a href="">Terms</a>
+            <a href="">Settings</a>
+        </div>
+        </div>
+    
+    </footer>
+</body>
+</html>
