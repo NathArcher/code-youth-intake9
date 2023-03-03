@@ -62,11 +62,23 @@ for (let i=0;i<=5;i++){
 }
 console.log ('the sum of all scores is', sum)
 console.log ('the average of all scores is', ave)
-//let sum = scores [0] + scores[1] + scores[2] + scores[3] + scores[4] + scores [5]
-//let ave = (scores [0] + scores[1] + scores[2] + scores[3] + scores[4] + scores [5])/6
 
 
 //3. to count total number of even and odd elements in an array.
+let arr2 = [1, 2, 3, 4, 5, 6];
+let evenCount = 0;
+let oddCount = 0;
+
+for (let i = 0; i < arr2.length; i++) {
+  if (arr2[i] % 2 === 0) {
+    evenCount++;
+  } else {
+    oddCount++;
+  }
+}
+
+console.log('Total even elements:', evenCount);
+console.log('Total odd elements:', oddCount);
 
 //4. to print all negative elements in an array.
 //make array numbers
@@ -84,19 +96,25 @@ if (num5[i]<=0)
 negative (num5)
 //5. search an element in array
 
-let arr9 =[4,10,30,'one','two','three']
+let arr3 =[4,10,30]
 const number=4
-function search (number, arr9){
-for (let i=0;i<=arr9.length;i++){
-if (arr9 [i]=number)
+function search (number, arr3){
+for (let i=0; i< arr3.length; i++){
+if (arr3 [i] === number){
 return i;
 }
-else 
-{console.log ('error')}
-    
+} 
+console.log ('error');
 }
+console.log(search(number,arr3));
 
 // //6. copy the elements of one array into another array. 
-// let arr4 = [-4,-10,-15,20,30,40]
-// let arr5 = [10,20,30,40,50]
+let arr4 = [-4,-10,-15,20,30,40];
+let arr5 = arr4.slice();
+console.log (arr5);
+
 //7. find the smallest element in an array.
+
+let numbers3 = [10, 5, 20, 3, 15];
+let smallestNum = Math.min(...numbers3);
+console.log(smallestNum); 
