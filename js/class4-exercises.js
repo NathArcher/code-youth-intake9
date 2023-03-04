@@ -17,6 +17,12 @@ function circle (radius)
 circle(5)
 
 //3. swap two numbers using function
+function swapNumbers(x, y) {
+    let temp = x;
+    x = y;
+    y = temp;
+    console.log('After swapping: x =',x , 'y = ', y);
+  }
 
 //4. program to find the value of one number raised to the power of another using functions. 
 function number (a){
