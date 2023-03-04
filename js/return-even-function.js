@@ -1,6 +1,8 @@
-function num1 (a){
-    let even = a % 2 == 0;
-    return even;
+function isEven (a){
+    if (a % 2 == 0;){
+    return true;}
+    
+    return false;
 }
 
-num1(7);
+console.log(isEven(3))
