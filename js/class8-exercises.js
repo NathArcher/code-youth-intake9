@@ -92,6 +92,9 @@ library.forEach((book) => {
 });
 
 console.log('Star Wars Characters Questions');
+// * Get characters with mass greater than 100
+// * Get characters with height less than 200
+// * Get all male characters
 const characters = [
     {
       name: "Luke Skywalker",
@@ -132,19 +135,3 @@ const characters = [
   let maleChars = characters.filter(char => char.gender === "male");
   console.log(`These characters are all male: ${maleChars.map(char => char.name)}`);
 
-// characters.forEach((char) => {
-//     if (char.mass > 100) {
-//         console.log (`these characters mass is more than 100: ${char.name++}`);
-//     }
-//     else if (char.height < 200)
-//     {console.log (`these characters have a height less than 200: ${char.name++}`)}
-    
-//     else (char.gender === 'male')
-//         {console.log (`these characters are all male: ${char.name++}`)
-//     }
-// });
-
-// * Get characters with mass greater than 100
-// * Get characters with height less than 200
-
-// * Get all male characters
