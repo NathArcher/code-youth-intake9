@@ -61,5 +61,9 @@ console.log (oddSum)
 
 
 // 7. Find the sum of squares of an array
+
+
 // 8. Capitalize first letter of each word in an array
+
+
 
