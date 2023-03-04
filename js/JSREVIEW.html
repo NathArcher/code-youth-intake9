@@ -20,6 +20,12 @@
 -->
     <script>
         let sequence = [true, false, true, true, false, true, true, true, false]
+        for (let i=0; i<= sequence.length; i++){
+            if (sequence[i] === sequence[i-1] ){
+                sequence [i] = !sequence [i];
+            }
+        }
+        console.log (sequence);
 
     </script>
 
