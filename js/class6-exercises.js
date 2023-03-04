@@ -7,4 +7,4 @@ newArr[i]= score1[i]+score2[i]
 console.log (newArr[i]);
 }
 
-spliceArr = arr.splice (4,0,66,77);
+splicescore1 = arr.splice (4,0,66,77);
