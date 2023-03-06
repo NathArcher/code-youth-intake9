@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Heading </h1>
+    <p class="para">First Paragraph</p>
+    <p id="second">Second Paragraph</p>
+    <p class="para">Third Paragraph</p>
+    <button onclick="alter()">Click</button>
+    <script>
+        let ele = document.querySelector ("p")// To use tag name write the tag 
+        let para =document.querySelector (".para") //when using class name we use a dot infront of the classname 
+        let id1 = docuemnt.querySelector ("#second") // to use ID with query selector place a # in front of the name
+        //query selector will always select the first one when there are multiple classes of the same name
+        //to select multiple elements you will need to use document.querySelectorAll("")
+        ele.style.backgroundColor="yellow"
+        let queryAll = document.querySelectorAll (".para")
+        console.log (queryAll)
+        queryAll.forEach((item) => item.style.color ="purple") 
+    </script>
+</body>
+</html>
