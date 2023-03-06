@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Heading </h1>
+    <p class="para">First Paragraph</p>
+    <p id="second">Second Paragraph</p>
+    <p class="para">Third Paragraph</p>
+    <button onclick="alter()">Click</button>
+    <script>
+        function alter(){
+        let ele = document.getElementsByClassName ("para");
+        console.log (ele);
+        ele[0].innerHTML="New Paragraph";
+        ele[1].style.textAlign="center";
+        for (let i=0; i<ele.length;i++){
+            ele[i].style.backgroundColor="blue"
+        }
+    }
+    </script>
+</body>
+</html>
