@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 1. Using DOM console.log() the parent element and then the child element inside it -->
+    <div class="parent">
+        <div>child</div>
+    </div>
+
+    <!-- 2. console.log() this header element using all three ways you have learned (class, id, and tag)-->
+    <header class="myHeader" id="pageHeader"></header>
+
+    <!-- 3. console.log() all of the a tags below-->
+    <a href="google.com">Google</a>
+    <a href="bing.com">Bing</a>
+    <a href="yahoo.com">Yahoo</a>
+
+    <script>
+        let parentElement = document.querySelector ('.parent')
+        let childElement = document.querySelector ('.parent > div')
+        let a = document.getElementsByTagName ("a")
+        console.log (`this is the parent element:`)
+        console.log(parentElement)
+        console.log (`this is the child element: `)
+        console.log (childElement)
+        let header = document.getElementsByTagName ("header")
+        console.log ("this is a header console.log using a Tag")
+        console.log (header)
+        let headerClass = document.getElementsByClassName ("myheader")
+        console.log ("this is a header console.log using a class")
+        console.log (headerClass)
+        let headerId = document.getElementById ("pageHeader")
+        console.log ("this is a header console.log using a ID")
+        console.log (headerId)
+        console.log ("This is a google link")
+        console.log (a[0])
+        console.log ("This is a Bing link")
+        console.log (a[1])
+        console.log ("This is a Yahoo link")
+        console.log (a[2])
+    </script>
+</body>
+</html>
