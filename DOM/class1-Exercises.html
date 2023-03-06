@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--Ex3: create a button with text ON,with background color red and 
+    text color white, when you click on a button, its text replaced 
+    by OFF, background color black-->
+<button onclick="OFF()">ON</button>
+<!--Ex4: Highlight all of the bold words in the paragraph text (with
+     a yellow background for example)-->
+<p><b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit. <b>Laboriosam
+     eos</b> repudiandae sed non amet expedita enim provident. <b>Sit nostrum,</b>
+     mollitia accusantium architecto <b>beatae dolores, cumque aliquid </b>
+     officia modi voluptatibus velit.</p> <b></b>
+<script>
+    let button1 = document.getElementsByTagName ("button");
+    console.log (button1)
+    button1[0].style.backgroundColor ="red";
+    button1[0].style.color="white";
+    function OFF (){
+        button1[0].style.backgroundColor = "black";
+        button1[0].innerHTML ="OFF";
+    }
+    let highlight = document.querySelectorAll ("b")
+    highlight.forEach((item) => item.style.backgroundColor ="yellow") 
+</script>
+</body>
+</html>
