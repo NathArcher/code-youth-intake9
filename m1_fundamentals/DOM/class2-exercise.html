@@ -1,0 +1,23 @@
+<html>
+<body>
+  <img src="https://p.kindpng.com/picc/s/40-407994_lotus-flower-png-lotus-flower-png-free-transparent.png" alt='photos' height='150px'/>
+  <img src='https://static.vecteezy.com/system/resources/previews/001/193/929/non_2x/vintage-car-png.png' alt='photos' height='150px'/>
+  <img src='https://www.kindpng.com/picc/m/381-3816942_indoor-plants-png-transparent-png.png' alt='photos' height='150px'/>
+  <img src='https://www.freepnglogos.com/uploads/dog-png/bow-wow-gourmet-dog-treats-are-healthy-natural-low-4.png' alt='photos' height='150px'/>
+  <img src='https://assets.webiconspng.com/uploads/2017/09/House-PNG-Image-45779.png' alt='photos' height='150px'/>
+<script>
+    //Give all the images at even position a similar border color and style, 
+    // and all the images at odd position same border style but different then 
+    // the even ones.
+    let evenImages = document.querySelectorAll('img:nth-child(even)')
+    let oddImages = document.querySelectorAll ('img:nth-child(odd)')
+
+    for (let i=0; i<evenImages.length;i++){
+        evenImages[i].style.border ='10px dashed blue'
+    }
+    for (let i=0; i<oddImages.length;i++){
+        oddImages[i].style.border ='5px solid red'
+    }
+</script>
+</body>
+</html>
