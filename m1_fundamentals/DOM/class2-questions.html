@@ -1,0 +1,69 @@
+  <!-- https://www.tutorialstonight.com/js/javascript-dom-manipulation
+  using ONLY JavaScript and the DOM methods.
+
+  Count the number of list items and and add a para tag to show the results.
+  You are given a DOM element like <ul class="iamge-list"></ul>. Your job is
+  to add 10 images to that list. For the src attribute you can use 
+  https://picsum.photos/200
+  You are given some names of different fruit and an unordered list html 
+  element; two button : one to add a list item for each to the unordered list, 
+  second to remove item from the list -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="list-count"></p>
+    <ul id="image-list"></ul>
+    <button onclick="addFruitButn()"> Add Fruit</button>
+    <button onclick="removeFruitButn()">Remove Fruit</button>
+    <ul id="fruit-list">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Quava</li>
+    <li>Pomergranite</li>
+    </ul>
+    <script>
+        let listCount = document.querySelectorAll ('li').length;
+        let listCountPara = document.getElementById('list-count');
+        listCountPara.innerText = `There are ${listCount} list items on this page.`;
+
+        function updateListCount() {
+        let listCount = document.querySelectorAll('li').length;
+        listCountPara.innerText = `There are ${listCount} list items on this page.`;
+        }
+
+        updateListCount();
+
+        let imageList = document.getElementById('image-list');
+
+        for (let i = 1; i <= 10; i++) {
+        let imgElement = new Image();
+        imgElement.src = `https://picsum.photos/200?image=${i}`;
+        imageList.appendChild(imgElement);
+        };
+
+        function addFruitButn() {
+        let newFruit = prompt('Enter a fruit name:');
+        let newFruitItem = document.createElement('li');
+        newFruitItem.textContent = newFruit;
+        document.getElementById('fruit-list').appendChild(newFruitItem);
+        updateListCount();
+        };
+
+        function removeFruitButn() {
+        let lastFruitItem = document.getElementById('fruit-list').lastElementChild;
+        if (lastFruitItem) {
+        document.getElementById('fruit-list').removeChild(lastFruitItem);
+        updateListCount();
+        }
+        };
+
+    </script>
+</body>
+</html>
