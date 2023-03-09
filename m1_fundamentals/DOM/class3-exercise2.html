@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="p1">Username:</p>
+        <input type = 'text' id="text-input" >
+        <button id="enter">Enter</button>
+    </div>
+<script>
+let enterButton = document.querySelector('#enter');
+let textInput = document.querySelector('#text-input');
+let p1 = document.querySelector ("#p1")
+let div = document.querySelector ('div');
+enterButton.addEventListener ('click', enterUsername);
+function enterUsername (){
+    if (textInput.value.length > 3){
+        let para = document.createElement ("p");
+        para.innerText = `Welcome ${textInput.value}`;
+        para.style.textDecoration = 'bold';
+        para.style.textAlign = 'center';
+        para.style.fontSize = '100px';
+        div.appendChild(para);
+        div.removeChild(textInput);
+        div.removeChild(enterButton);
+        div.removeChild (p1)
+    }
+    else 
+    {alert ("Username too short")}
+}
+</script>
+</body>
+</html>
+<!-- Create a page welcome message :
+1. Get the user name in the input field
+
+2. When the button is pressed add an event that get the user name and 
+creates a welcome message on the page
+
+3. Add a check to ensure the length of the input is larger than 3 
+characters long -->
