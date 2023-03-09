@@ -1,0 +1,118 @@
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bee {
+            display: flex;
+            align-items: center;
+        }
+​
+        .beeBody {
+            width: 250px;
+            height: 200px;
+            border: 1px solid;
+            display: flex;
+            border-radius: 13vh;
+            overflow: hidden;
+        }
+​
+        .beeSection {
+            width: 50px;
+            height: 100%;
+        }
+​
+        .beeStinger {
+            border: 1vh solid transparent;
+            border-right: 10vh solid black;
+            border-right-color: black;
+        }
+​
+        #beeHead {
+            width: 10vh;
+            height: 10vh;
+            border: 1px solid;
+            border-radius: 8vh;
+        }
+​
+        .shape {
+            width: 10vh;
+            height: 10vh;
+            border: 1px solid;
+            border-radius: 5vh;
+            border-bottom-right-radius: 0;
+            background-color: black;
+            box-shadow: inset 0 0 0 2vh white;
+            transform: rotateZ(0deg);
+        }
+    </style>
+</head>
+​
+<body>
+​
+​
+    <!--1. Using Dom colour in the bee below -->
+    <h1>Question 1</h1>
+​
+    <div class="bee">
+        <div class="beeStinger"></div>
+        <div class="beeBody">
+            <div class="beeSection"></div>
+            <div class="beeSection"></div>
+            <div class="beeSection"></div>
+            <div class="beeSection"></div>
+            <div class="beeSection"></div>
+        </div>
+        <div id="beeHead"></div>
+    </div>
+​
+    <script>
+        let sections = document.querySelectorAll('.beeSection') //Selecting all the bee sections
+        for (let i = 0; i < sections.length; i++) {
+            if (i % 2 == 0) { //If i is even
+                sections[i].style.backgroundColor = 'yellow' //Set the bee section to yellow
+            } else { //If i is odd
+                sections[i].style.backgroundColor = 'black' //Set the bee section to black
+            }
+        }
+        document.querySelector('#beeHead').style.backgroundColor = 'yellow'
+    </script>
+​
+​
+​
+    <!--2. Write the function for this button. When the function runs it should alert whatever the message in the button is -->
+    <h1>Question 2</h1>
+​
+    <button onclick="printMessage()" id="messageButton" message="You did it!!">Message</button>
+​
+    <script>
+        function printMessage() {
+            let message = document.querySelector('#messageButton').getAttribute("message") //Selects the messageButton element and gets the message attribute from it
+            alert(message)
+        }
+    </script>
+​
+​
+​
+    <!--3. Write the spin function. When clicked spin the shape 90 degrees clock-wise -->
+    <!-- !Hint: the unit used for rotate is deg     ex(90deg) -->
+    <h1>Question 3</h1>
+​
+    <div onclick="spin()" class="shape"></div>
+​
+    <script>
+        let currentDeg = 0 //Setting the default degrees (0 because it hasn't been spun when the code first runs)
+        function spin() {
+            let shape = document.querySelectorAll('.shape')[0]
+            currentDeg += 90; //Adds 90 to the rotation
+            shape.style.transform = "rotateZ(" + currentDeg + "deg)" //Sets the css property to the value of rotateZ(**deg)
+        }
+    </script>
+​
+​
+</body>
+​
+</html>
