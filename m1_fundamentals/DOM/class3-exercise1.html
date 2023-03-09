@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  
+  </script>
+  <style>
+   .container {
+      display: grid;
+      grid-template-columns: 49% 49%;
+      grid-template-rows:    10em 10em;
+      gap: 1%;
+      background-color: AliceBlue;
+      margin: 2em;
+      padding: 2em;
+    }
+    .cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: blue;
+      font-size: 3em;
+    }
+  </style>
+</head>
+
+<body id="body" onload="registerAllEvents()">
+  <div class="container">
+    <div id="divA" class="cell">A</div>
+    <div id="divB" class="cell">B</div>
+    <div id="divC" class="cell">C</div>
+    <div id="divD" class="cell">D</div>
+<script>
+    let divA = document.getElementById("divA");
+    divA.addEventListener ('click', changeColor);
+    function changeColor(){
+        // alert ('it works')
+    let currentColor = divA.style.backgroundColor;
+        
+        if (currentColor === "gold"){
+            divA.style.backgroundColor = "silver";
+        } else {
+            divA.style.backgroundColor = "gold";
+        }
+    }
+    let divC =  document.getElementById ("divC");
+    divC.addEventListener ('mouseenter', makeItRed);
+    divC.addEventListener ('mouseleave', makeItGreen);
+    function makeItRed () {
+        divC.style.backgroundColor = "red"
+    }
+    function makeItGreen (){
+        divC.style.backgroundColor = "green"
+    }
+</script>
+</body>
+</html>
+<!-- 1. Implement a 'click' event handler that toggles the 'A'\
+     area between the background colors 'silver' and 'gold'. -->
+
+<!-- 2. Implement two event handlers for the 'C' area, 'mouseenter'
+     and 'mouseleave'. When the mouse pointer enters the area, its 
+     background color changes to "red"; when it leaves the area, 
+     its background color changes to "green". -->
+
+<!-- Create a page welcome message :
+1. Get the user name in the input field
+
+2. When the button is pressed add an event that get the user name and creates a welcome message on the page
+
+3. Add a check to ensure the length of the input is larger than 3 characters long -->
