@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+//1. Fetch this api  
+let url = "https://restcountries.com/v3.1/all"
+fetch (url)
+.then ((response) => response.json())
+//2. Create a new object called regions. add 6 arrays for each 
+//region in the world 
+//ex: americas:[],
+//    europe:[],
+//    ...
+.then ((data)=>{
+    let regions = {
+    americas : [],
+    europe : [],
+    africa : [],
+    oceania : [],
+    asia : [],
+    }
+//3. Iterate through the response and sort each country into it's
+//region  
+data.forEach((country) => {
+      let region = country.region;
+      if (region.includes("Americas")) {
+        regions.americas.push(country);
+      } else if (region.includes("Europe")) {
+        regions.europe.push(country);
+      } else if (region.includes("Africa")) {
+        regions.africa.push(country);
+      } else if (region.includes("Oceania")) {
+        regions.oceania.push(country);
+      } else if (region.includes("Asia")) {
+        regions.asia.push(country);
+      }
+    });
+
+console.log(regions); 
+
+let americasCount = (document.getElementById("americas-count").textContent = regions.americas.length);
+let europeCount = (document.getElementById("europe-count").textContent = regions.europe.length);
+let africaCount = (document.getElementById("africa-count").textContent = regions.africa.length);
+let oceaniaCount = (document.getElementById("oceania-count").textContent = regions.oceania.length);
+let asiaCount = (document.getElementById("asia-count").textContent = regions.asia.length);
+
+let list = document.createElement ("ul")  
+
+let americasListItem = document.createElement("li");
+    americasListItem.textContent =
+      "Amount of countries in Americas: " + americasCount;
+    list.append(americasListItem);
+
+    let europeListItem = document.createElement("li");
+    europeListItem.textContent =
+      "Amount of countries in Europe: " + europeCount;
+    list.append(europeListItem);
+
+    let africaListItem = document.createElement("li");
+    africaListItem.textContent =
+      "Amount of countries in Africa: " + africaCount;
+    list.append(africaListItem);
+
+    let oceaniaListItem = document.createElement("li");
+    oceaniaListItem.textContent =
+      "Amount of countries in Oceania: " + oceaniaCount;
+    list.append(oceaniaListItem);
+
+    let asiaListItem = document.createElement("li");
+    asiaListItem.textContent = "Amount of countries in Asia: " + asiaCount;
+    list.append(asiaListItem);
+
+document.body.append(list);
+})
+
+.catch ((err)=>console.log (err))
+
+
+
+
+
+</script>
+</body>
+</html>
