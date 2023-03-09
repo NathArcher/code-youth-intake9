@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imgDiv{
+            width: 10vh;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .box{
+            display: inline-block;
+            width: 5vh;
+            height: 5vh;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--1. Write the function for adding the product to the cart -->
+    <div class="product">
+        <div class="imgDiv">
+            <img src="https://m.media-amazon.com/images/I/61jR700-izL._SL1391_.jpg" alt="">
+        </div>
+        <p class="productDetails"><span class="name">Skateboard</span> $<span class="price">5.99</span></p>
+        <button class="addToCart" onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="cart">
+        <h1>Cart</h1>
+    </div>
+    <script>
+        let skateboardImage = document.querySelector('#imgDiv img').src
+        let skateboardName = document.querySelector ('#name').textContent
+        let skateboardPrice = document.querySelector('#price').textContent
+        let skateboard = 'skateboardImage' + 'skateboardName' + 'skateboardPrice';
+        
+        function addToCart(){
+            let cart = document.querySelector('#cart');
+            let item = document.createElement('div');
+            item.textContent = skateboard;
+            cart.appendChild(item);
+        }
+    </script>
+
+    <!--2. Using a loop create 15 boxes. give each box the class 'box'. append them to the body so that there are 3 rows of 5 boxes -->
+    <!-- !Hint
+        it should look like this
+        ▢▢▢▢▢
+        ▢▢▢▢▢
+        ▢▢▢▢▢
+    -->
+
+
+    <!--3. Write the function for the flip button. When pressed flip the body upside down. when pressed again it should flip again -->
+    <button onclick="flip()">Flip</button>
+
+</body>
+</html>
