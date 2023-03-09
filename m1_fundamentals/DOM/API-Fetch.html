@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+
+    fetch (url)
+    .then ((response) => response.json ())
+    .then ((data)=>{
+    let table = document.createElement ("table");
+        let nameTr = document.createElement ("tr")
+        let name = document.createElement ("td");
+        name.innerHTML = data.drinks[0].strDrink; 
+        nameTr.appendChild (name);
+        table.appendChild (nameTr);
+        name.style.fontWeight = "bold"
+
+        let categoryTr = document.createElement ("tr")
+        let category = document.createElement ("td")
+        category.innerHTML = data.drinks[0].strCategory;
+        categoryTr.appendChild (category)
+        table.appendChild (categoryTr);
+
+        let instructionsTr = document.createElement ("tr")
+        let instructions = document.createElement ("td")
+        instructions.innerHTML = data.drinks[0].strInstructions 
+        instructionsTr.appendChild (instructions); 
+        table.appendChild (instructionsTr)
+   
+    table.style.color = "black"
+    table.cellPadding = "5px"
+    
+    document.body.appendChild (table);
+   
+    })
+    .catch ((err) =>console.log (err));
+    
+    
+</script>
+</body>
+</html>
