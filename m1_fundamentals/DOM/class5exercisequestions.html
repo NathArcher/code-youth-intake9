@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.product-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    
+    <script>
+        //3.update server with a resource
+   
+//     fetch('products.json', {
+//     method: 'PUT',
+//     body: JSON.stringify({
+//     id: 11,
+//     name: 'keyboard',
+//     img: 'https://www.randomlists.com/img/things/keyboard.webp',
+//     price: '$19.99'
+//     }),
+//     headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//     },
+// })
+
+//   .then((json) => console.log(json));
+//         // 1. Make a json file of products (10 only)
+        fetch ('products.json')
+        .then((res) => res.json())
+        .then((data) => {
+            let grid = document.createElement('div');
+            grid.className = 'grid';
+            data.forEach((product) => {
+                let card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <img src="${product.img}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>${product.price}</p>
+                `;
+                grid.appendChild(card);
+            });
+            document.body.appendChild(grid);
+        })
+        .catch((err) => console.log(err));
+        // 2. Fetch data from json file and display as a product card with image,
+        // title, and price
+    </script>
+    
+</body>
+</html>
