@@ -1,0 +1,68 @@
+[{
+    "id":1,
+    "name":"TV",
+    "img":"https://www.randomlists.com/img/things/tv.webp",
+    "price":"$199.99"
+},
+{ 
+    "id":2,
+    "name":"Coasters",
+    "img":"https://www.randomlists.com/img/things/coasters.webp",
+    "price":"$9.99"
+
+},
+{ 
+    "id":3,
+    "name":"Chocolate",
+    "img":"https://www.randomlists.com/img/things/chocolate.webp",
+    "price":"$5.99"
+
+},
+{ 
+    "id":4,
+    "name":"Pool Stick",
+    "img":"https://www.randomlists.com/img/things/pool_stick.webp",
+    "price":"$29.99"
+
+},
+{ 
+    "id":5,
+    "name":"Candle",
+    "img":"https://www.randomlists.com/img/things/candle.webp",
+    "price":"$4.99"
+
+},
+{ 
+    "id":6,
+    "name":"Camera",
+    "img":"https://www.randomlists.com/img/things/camera.webp",
+    "price":"$599.99"
+
+},
+{ 
+    "id":7,
+    "name":"Clamp",
+    "img":"https://www.randomlists.com/img/things/clamp.webp",
+    "price":"$25.99"
+},
+{ 
+    "id":8,
+    "name":"Lace",
+    "img":"https://www.randomlists.com/img/things/lace.webp",
+    "price":"$3.99"
+
+},
+{ 
+    "id":9,
+    "name":"Needle",
+    "img":"https://www.randomlists.com/img/things/needle.webp",
+    "price":"$1.99"
+
+},
+{ 
+    "id":10,
+    "name":"Perfume",
+    "img":"https://www.randomlists.com/img/things/perfume.webp",
+    "price":"$215"
+
+}]
