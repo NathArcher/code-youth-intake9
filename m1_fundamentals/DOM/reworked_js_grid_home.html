@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/gridstyle.css" />
+  </head>
+  <body>
+    <main>
+      <div class="artbox">
+        <a
+          class="musicmain_titles_links"
+          href="main_subdirs/featured.html"
+          draggable="false"
+        >
+          <h2 id="musicmain_titles">Featured</h2>
+        </a>
+        <div class="grid_container" id="music-items-container"></div>
+      </div>
+    </main>
+
+    <script>
+      const musicItemsContainer = document.getElementById("music-items-container");
+
+      fetch("music_data.json")
+        .then((response) => response.json())
+        .then((jsonData) => {
+          for (const musicItem of jsonData.music_items) {
+  
+            const musicItemDiv = document.createElement("div");
+            musicItemDiv.classList.add("musicitem");
+
+            const musicLink = document.createElement("a");
+            musicLink.classList.add("musiclinks");
+            musicLink.onclick = playlistadd;
+
+            const musicImage = document.createElement("img");
+            musicImage.id = "art";
+            musicImage.src = musicItem.image_src;
+
+            const musicTitleDiv = document.createElement("div");
+            musicTitleDiv.id = "musicitemtexttitle";
+
+            const musicTitle = document.createElement("h4");
+            musicTitle.textContent = musicItem.title;
+
+            const musicArtistDiv = document.createElement("div");
+            musicArtistDiv.id = "musicitemtext";
+
+            const musicArtist = document.createElement("span");
+            musicArtist.textContent = musicItem.artist;
+
+            musicLink.appendChild(musicImage);
+            musicTitleDiv.appendChild(musicTitle);
+            musicArtistDiv.appendChild(musicArtist);
+            musicLink.appendChild(musicTitleDiv);
+            musicLink.appendChild(musicArtistDiv);
+            musicItemDiv.appendChild(musicLink);
+            musicItemsContainer.appendChild(musicItemDiv);
+          }
+        });
+
+
+      function playlistadd() {
+        
+        console.log("Add to playlist");
+      }
+    </script>
+  </body>
+</html>
+

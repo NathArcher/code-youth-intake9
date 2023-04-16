@@ -1,0 +1,48 @@
+{
+  "music_items": [
+    {
+      "title": "Open Mouth, Open Heart",
+      "artist": "Destroy Boys",
+      "image_src": "style/img/dboy.jpg"
+    },
+    {
+      "title": "New Levels Devils",
+      "artist": "Polyphia",
+      "image_src": "style/img/goat.jpg"
+    },
+    {
+      "title": "Yes. Yes. Yes. Yes. Yes.",
+      "artist": "Hunny",
+      "image_src": "style/img/ritalin.jpg"
+    },
+    {
+      "title": "Castle Death",
+      "artist": "Sense from Nonsense",
+      "image_src": "style/img/sfn_castled.jpg"
+    },
+    {
+      "title": "In the Shadow of Gloomspire",
+      "artist": "Ozeregroth",
+      "image_src": "style/img/ozeregroth_in_the_sog.jpg"
+    },
+    {
+      "title": "Thriller",
+      "artist": "Michael Jackson",
+      "image_src": "style/img/mj_thriller.webp"
+    },
+    {
+      "title": "Ever After",
+      "artist": "Marianas Trench",
+      "image_src": "style/img/marianas_trench_everafter.jpg"
+    },
+    {
+      "title": "Ghost",
+      "artist": "Radical Face",
+      "image_src": "style/img/ghost.jpg"
+    },
+    {
+      "title": "Sample Album",
+      "artist": "Sample Bandname",
+      "image_src": "style/img/retro_genre.jpg"
+    }]
+}
